@@ -26,7 +26,7 @@ static void	make_conversion(char c, va_list *args, int *ptr)
 		(*ptr)++;
 	}
 	else if (c == 'u')
-		ft_putuns_printf(va_arg(args, unsigned int), ptr);
+		ft_putuns_printf(va_arg(*args, unsigned int), ptr);
 	else if (c == 'x')
 		hex_lo_conversion(args, ptr);
 	else if (c == 'X')
