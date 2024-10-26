@@ -12,7 +12,7 @@
 
 #include "incl/ft_printf.h"
 
-void	make_conversion(char c, va_list *args, int *ptr)
+static void	make_conversion(char c, va_list *args, int *ptr)
 {
 	if (c == 's')
 		string_conversion(args, ptr);
@@ -26,7 +26,7 @@ void	make_conversion(char c, va_list *args, int *ptr)
 		(*ptr)++;
 	}
 	else if (c == 'u')
-		uns_nbr_conversion(args, ptr);
+		ft_putuns_printf(va_arg(args, unsigned int), ptr);
 	else if (c == 'x')
 		hex_lo_conversion(args, ptr);
 	else if (c == 'X')
