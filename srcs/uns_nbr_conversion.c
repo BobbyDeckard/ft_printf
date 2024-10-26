@@ -12,7 +12,7 @@
 
 #include "../incl/ft_printf.h"
 
-static void	ft_putuns_printf(unsigned int n, int *ptr)
+void	ft_putuns_printf(unsigned int n, int *ptr)
 {
 	char	c;
 
@@ -28,9 +28,4 @@ static void	ft_putuns_printf(unsigned int n, int *ptr)
 		write(1, &c, 1);
 		(*ptr)++;
 	}
-}
-
-void	uns_nbr_conversion(va_list *args, int *ptr)
-{
-	ft_putuns_printf(va_arg(*args, unsigned int), ptr);
 }

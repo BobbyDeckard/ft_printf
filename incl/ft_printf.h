@@ -19,9 +19,9 @@ int		ft_printf(const char *str, ...);
 void	address_conversion(va_list *args, int *ptr);
 void	char_conversion(va_list *args, int *ptr);
 void	dec_nbr_conversion(va_list *args, int *ptr);
+void    ft_putuns_printf(unsigned int n, int *ptr);
 void	hex_lo_conversion(va_list *args, int *ptr);
 void	hex_up_conversion(va_list *args, int *ptr);
 void	string_conversion(va_list *args, int *ptr);
-void	uns_nbr_conversion(va_list *args, int *ptr);
 
 #endif
