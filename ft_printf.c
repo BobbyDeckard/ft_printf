@@ -48,6 +48,7 @@ int	ft_printf(const char *str, ...)
 	ptr = &count;
 	while (str[i])
 	{
+
 		if (str[i] == '%')
 			make_conversion(str[++i], &args, ptr);
 		else

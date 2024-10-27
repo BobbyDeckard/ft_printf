@@ -34,7 +34,7 @@ all: $(LIBRARY) $(NAME)
 
 $(NAME): $(OBJS)
 	$(AR) $(ARFLAGS) $(LIBRARY) $?
-	cp $(LIBRARY) ./$(NAME)
+	cp $(LIBRARY) $(NAME)
 
 %.o: %.c $(HEADERS) $(LIBRARY)
 	$(CC) $(CFLAGS) -c $< -o $@
